@@ -1,0 +1,109 @@
+.main {
+
+  //TIPS
+  &__tips {
+    max-width: 18.13rem;
+    margin: auto;
+    @include tablet {
+      max-width: 43.13rem;
+    }
+    @include desktop {
+      max-width: 45.63rem;
+    }
+    .tips-category {
+      margin-top: 1.875rem;
+      color: $colorQuinary;
+      text-transform: capitalize;
+      font-size: $mobileMainCategory;
+      font-family: $bodyFont;
+      font-weight: $regular;
+      @include desktop {
+        font-size: $desktopMainCategory;
+        margin-top: 3.75rem;
+      }
+    }
+    .tips-title {
+      font-family: $titleFont;
+      font-weight: $bold;
+      font-size: $mobileMainTitle;
+      margin-top: 0.625rem;
+      margin-bottom: 0.9375rem;
+      line-height: 1.875rem;
+      @include tablet {
+        font-size: $tabletMainTitle;
+        line-height: 2.813rem;
+        margin-bottom: 1.875rem;
+      }
+    }
+    .tips-description {
+      margin-bottom: 1.875rem;
+      font-family: $bodyFont;
+      font-weight: $regular;
+      color: $colorSecondary;
+      line-height: 1.875rem;
+      font-size: $mobileMainDescription;
+      @media tablet {
+        font-size: $tabletMainDescription;}
+    } 
+  }
+
+  //REASONS
+  &__reasons {
+    margin: auto;
+    padding-top: 1.875rem;
+    padding-bottom: 3.75rem;
+    background-color: $backgroundReasons;
+    @include desktop {
+      padding-top: 3.75rem;
+    }
+    .reasons-title {
+      font-family: $titleFont;
+      font-weight: $bold;
+      font-size: $mobileMainTitle;
+      margin-bottom: 2.813rem;
+      line-height: 1.875rem;
+      text-align: center;
+      @include tablet {
+        font-size: $tabletReasonsTitle;
+        line-height: 2.813rem;
+      }
+      @include desktop {
+        font-size: $desktopReasonsTitle;
+      }
+    }
+    .reasons-list {
+      text-align: center;
+      max-width: 11.25rem;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      @include tablet {
+        max-width: 43.5rem;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      @include desktop {
+        max-width: 64.88rem;
+      }
+      .reason {
+        margin-bottom: 2.813rem;
+        font-size: $mobileReasons;
+        line-height: 1.875rem;
+        font-family: $bodyFont;
+        @include tablet {
+          margin-bottom: 3.75rem;
+          font-size: $tabletReasonsDescription;
+        }
+        .reason-subtitle {
+          font-family: $titleFont;
+          font-weight: $bold;
+          @include tablet {
+            margin-bottom: 0.25rem;
+            font-size: $tabletReasonsSubtitle;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+//ANIMATIONS
+
+@keyframes rotate {
+  from {
+    transform: scale(1) rotate(-380deg);}
+  to {
+    transform: scale(1.1);}
+}
+
+@keyframes changeColor {
+  from {
+    transform: scale(1);}
+  to {
+    background-color: $colorTertiary;
+    color: $colorPrimary;
+    transform: scale(1.1);}
+}
+
+@keyframes changeColorReasons {
+  from {
+    transform: scale(1);}
+  to {
+    background-color: $colorPrimary;
+    color: $colorTertiary;
+    transform: scale(1.1);}
+}
+
+.button {
+  width: 2.813rem;
+  height: 2.813rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $bodyFont;
+  font-weight: $medium;
+  font-size: $mobileMainButton;
+  text-transform: capitalize;} 
+
+//HERO
+.hero__down-button {
+  margin-bottom: 3.313rem;
+  margin-top: 2.813rem;
+  background-color: #fff;
+  @include tablet {
+    margin-bottom: 2.813rem;
+    margin-top: 1.875rem;
+  }
+  @include desktop {
+    margin-bottom: 0.8125rem;
+  }
+  &:hover {
+    animation: rotate 1.2s ease-out 0s;
+    animation-fill-mode: forwards;
+  }
+  a {
+    top: 0.125rem;
+    position: relative;
+    padding: 0.75rem;
+  }
+}
+
+//SECOND-MODULE-TIPS
+.tips-button {
+  margin-bottom: 2.813rem;
+  border-radius: 1.375rem;
+  color: $colorTertiary;
+  border: solid 0.125rem $colorTertiary;
+  background-color: $colorPrimary;
+  width: 4.75rem;
+  @include tablet {
+    margin-bottom: 3.75rem;
+    width: 5.688rem;
+  }
+  @include desktop {
+    width: 10rem;
+  }
+  &:hover {
+    animation: changeColor 0.5s ease-out 0s;
+    animation-fill-mode: forwards;
+  }
+}
+
+//THIRD-MODULE-REASONS
+.reasons-button {
+  border-radius: 1.375rem;
+  background-color: $colorTertiary;
+  width: 11.5rem;
+  margin: auto;
+  color: #fff;
+  &:hover {
+    animation: changeColorReasons 0.5s ease-out 0s;
+    animation-fill-mode: forwards;
+    border: solid 0.125rem $colorTertiary;
+  }
+  @include tablet {
+    width: 13.13rem;
+  }
+  @include desktop {
+    width: 15.94rem;
+  }
+}
+
+//FOOTER
+.footer-button {
+  margin: auto;
+  background-color: $colorPrimary;
+  position: relative;
+  margin-top: -1.438rem;
+  &:hover {
+    animation: rotate 1.2s ease-out 0s;
+    animation-fill-mode: forwards;
+  }
+  a {
+    top: 0.1875rem;
+    position: relative;
+    padding: 0.75rem;
+  }
+}

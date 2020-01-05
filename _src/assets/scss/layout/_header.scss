@@ -1,0 +1,13 @@
+.header {
+  &__menu {
+    width: 2.75rem;
+    height: 2.75rem;
+    position: fixed;
+    background-color: $buttonBackground;
+    display: flex;
+    justify-content: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
